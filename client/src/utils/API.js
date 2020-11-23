@@ -10,10 +10,10 @@ export default {
         return axios.post("/api/books", bookData)
     },
     getBooks: function(){
-        console.log('[API.getBooks] function returned: ', axios.get("/api/books"))
         return axios.get("/api/books")
     },
     deleteBook: function(id){
+        console.log('[API.deleteBook] function reached ...')
         return axios.delete("/api/books/" + id)
     }
 }

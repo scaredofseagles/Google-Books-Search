@@ -12,10 +12,9 @@ async function create(req, res){
 }
 
 async function remove(req, res){
-    let result = await db.Book.findById({_id: req.params.id})
-    result.remove()
-    console.log(req.body)
-    console.log(`Deleting item ${_id} from the database`)
+    console.log(`Deleting item id: ${req.params.id} from the database`)
+    let result = await db.Book.findByIdAndDelete({_id: req.params.id})
+    res.send({message: "Deleted item"})
 }
 
 module.exports = {findAll, create, remove}

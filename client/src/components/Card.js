@@ -10,8 +10,10 @@ function Card(props) {
   }
 
   async function deleteBook(){
-    let result = await API.deleteBook()
     console.log('Clicked on delete button')
+    console.log('Item id: ', props.id)
+    let result = await API.deleteBook(props.id)
+    window.location.reload()
     console.log(result)
 }
 
@@ -37,10 +39,10 @@ function Card(props) {
             <a href={props.link} target="_blank" type="button" className="btn btn-primary">
               View
             </a>
-            <button onClick={saveBooks} value={props} type="button" className="btn btn-success">
+            <button disabled={!saveBooks} onClick={saveBooks} value={props} type="button" className="btn btn-success">
               Save
             </button>
-            <button onClick={deleteBook} type="button" className="btn btn-danger">
+            <button disabled={!deleteBook} onClick={deleteBook} value={props} type="button" className="btn btn-danger">
               Delete
             </button>
           </div>
