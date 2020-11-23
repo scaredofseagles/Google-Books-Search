@@ -3,10 +3,10 @@ import API from '../utils/API'
 
 function Card(props) {
   
-  async function saveBooks(event){
-    console.log(event.target)
+  async function saveBooks(){
     console.log('Clicked on save button')
-    let result = await API.saveBooks()
+    let result = await API.saveBooks(props)
+    console.log('[saveBooks.card]', result)
   }
 
   async function deleteBook(){
@@ -34,10 +34,10 @@ function Card(props) {
             role="group"
             aria-label="Basic mixed styles example"
           >
-            <a href={props.view} target="_blank" type="button" className="btn btn-primary">
+            <a href={props.link} target="_blank" type="button" className="btn btn-primary">
               View
             </a>
-            <button onClick={saveBooks} type="button" className="btn btn-success">
+            <button onClick={saveBooks} value={props} type="button" className="btn btn-success">
               Save
             </button>
             <button onClick={deleteBook} type="button" className="btn btn-danger">
