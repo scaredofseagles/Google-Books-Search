@@ -12,7 +12,7 @@ function SavedBooks(){
     async function loadBooks(){
         console.log('[loadBooks] function reached')
         let result = await API.getBooks()
-        // setBooks(result)
+        setBooks(result.data)
         console.log('[loadBooks]',  result)
     }
 

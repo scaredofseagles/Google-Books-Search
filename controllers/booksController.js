@@ -3,7 +3,7 @@ const db = require("../models")
 async function findAll(req, res){
     let result = await db.Book.find({})
     console.log('Retrieved from the database: ', result)
-    return result
+    res.json(result)
 }
 
 async function create(req, res){
