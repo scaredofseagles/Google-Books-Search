@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import Navbar from "./components/Navbar";
-import Banner from "./components/Banner";
-import Footer from "./components/Footer";
 import Search from "./views/Search"
 import Saved from "./views/Saved"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -24,7 +22,6 @@ function App() {
           </Route>
         </Switch>
       </div>
-      <Footer />
     </div>
   );
 }

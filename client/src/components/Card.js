@@ -1,5 +1,7 @@
-import React from "react";
+import React, {useState} from "react";
 import API from '../utils/API'
+import Alert from 'react-bootstrap/Alert'
+import Button from 'react-bootstrap/Button'
 
 function Card(props) {
   
@@ -7,6 +9,7 @@ function Card(props) {
     console.log('Clicked on save button')
     let result = await API.saveBooks(props)
     console.log('[saveBooks.card]', result)
+    
   }
 
   async function deleteBook(){
@@ -16,10 +19,26 @@ function Card(props) {
     window.location.reload()
     console.log(result)
 }
+  const [show, setShow] = useState(false);
+
+  function AlertDismissibleExample() {
+    
+
+    if (show){
+      return(
+        <Alert variant='success'>
+          Successfully saved book!
+        </Alert>
+      )
+    } else{
+      return null
+    }
+  }
 
   return (
     <div className="card mb-3">
       <div className="row g-0">
+        <AlertDismissibleExample />
         <div className="col-md-4">
           <img src={props.image} alt="book image" />
         </div>
@@ -39,7 +58,7 @@ function Card(props) {
             <a href={props.link} target="_blank" type="button" className="btn btn-primary">
               View
             </a>
-            <button disabled={!saveBooks} onClick={saveBooks} value={props} type="button" className="btn btn-success">
+            <button disabled={!saveBooks} onClick={() => {saveBooks(); setShow(true)}} value={props} type="button" className="btn btn-success">
               Save
             </button>
             <button disabled={!deleteBook} onClick={deleteBook} value={props} type="button" className="btn btn-danger">

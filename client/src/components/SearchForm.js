@@ -64,7 +64,7 @@ function SearchForm() {
             authors={book.volumeInfo.authors}
             description={book.volumeInfo.description}
             image={book.volumeInfo.imageLinks.thumbnail}
-            view={book.volumeInfo.previewLink}
+            link={book.volumeInfo.previewLink}
             />;
         }) :
         <h5 className="text-muted">No Results to Display</h5>}
