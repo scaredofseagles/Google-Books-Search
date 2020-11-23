@@ -8,7 +8,7 @@ function Search(){
         <div className="container-fluid">
             <Banner/>
             <SearchForm/>
-            <SearchResults />
+            {/* <SearchResults /> */}
         </div>
     )
 }

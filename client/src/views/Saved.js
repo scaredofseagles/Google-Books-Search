@@ -1,12 +1,12 @@
 import React from 'react'
 import Banner from '../components/Banner'
-import SearchResults from '../components/SearchResults'
+import SavedBooks from '../components/SavedBooks'
 
 function Saved(){
     return(
         <div className="container-fluid">
             <Banner/>
-            <SearchResults/>
+            <SavedBooks/>
         </div>
     )
 }
