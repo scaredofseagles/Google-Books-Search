@@ -1,0 +1,29 @@
+#banner{
+    height: 30vh;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.container{
+    height: 100vh;
+}
+
+li{
+    list-style-type: none;
+}
+.card-img{
+    object-fit:cover;
+    object-position: top;
+    max-height: 30vh;
+}
+
+.card{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 0px;
+}

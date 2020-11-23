@@ -2,11 +2,11 @@ import React from 'react'
 
 function SearchForm(){
     return(
-        <div class="card bg-dark text-white">
+        <div className="card bg-light text-black">
             <h4>Book Search</h4>
-            <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2" />
-                <button class="btn btn-primary" type="button" id="button-addon2">Search</button>
+            <div className="input-group mb-3">
+                <input type="text" className="form-control" placeholder="Search Book Title" aria-label="Recipient's username" aria-describedby="button-addon2" />
+                <button className="btn btn-primary" type="button" id="button-addon2">Search</button>
             </div>
         </div>
         
