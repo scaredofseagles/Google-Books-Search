@@ -1,29 +1,51 @@
-# Create React Express App
+# Google Books Serch
 
-## About This Boilerplate
+## Description
 
-This setup allows for a Node/Express/React app which can be easily deployed to Heroku.
+A web application that queries and displays books that the user can save to view later or delete from their saved list.
 
-The front-end React app will auto-reload as it's updated via webpack dev server, and the backend Express app will auto-reload independently with nodemon.
+## Technologies
 
-## Starting the app locally
+* React.js
+* Express.js
+* JavaScript
+* HTML
+* CSS
 
-Start by installing front and backend dependencies. While in this directory, run the following command:
-
-```
-npm install
-```
-
-This should install node modules within the server and the client folder.
-
-After both installations complete, run the following command in your terminal:
+## Installation
 
 ```
-npm start
+npm install express mongoose path
+cd client
+npm install axios bootstrap react-bootstrap react-router dom
+cd ..
+npm run start
 ```
 
-Your app should now be running on <http://localhost:3000>. The Express server should intercept any AJAX requests from the client.
+## Goal of the Project
 
-## Deployment (Heroku)
+***Create a React-based Google Books Search app***
 
-To deploy, simply add and commit your changes, and push to Heroku. As is, the NPM scripts should take care of the rest.
+As a full stact web application, I created the front-end using React with the help of JavaScript, HTML, and CSS to achieve a responsive design. For complete functionality, Express.js was used to render the server-side code and data was stored and queried using MongoDB with Mongoose as the ODM.
+
+## Usage
+
+The following image is an example of the web application's functionality and appearance.
+
+![Image](./googlebooks-screenshot.png)
+
+## URL
+
+See the deployed web application [here](https://fast-brook-62371.herokuapp.com/)
+
+## License
+
+MIT License
+
+Copyright (c) 2020 Dailey Kaze
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
